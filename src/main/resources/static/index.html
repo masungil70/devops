@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Workd</h1>
+    <ul>
+        <li><a id="codeList">코드목록</a></li>
+        <li><a id="findByCd">java코드 상세보기</a></li>
+        <li><a id="deleteCode">java코드 삭제</a></li>
+    </ul>
+    <div id="result"></div>
+    <script>
+        //결과 출력을 위한 html 
+        const result = document.querySelector("#result");
+
+        //코드 목록을 클릭했을 때 처리 하는 부분 
+        document.querySelector("#codeList").addEventListener("click", e => {
+            fetch("/codeList?grp_cd=lang")
+            .then(response => response.json())
+            .then(json => {
+                result.innerText = JSON.stringify(json);
+            })
+        });
+        //코드 상세보기를 클릭했을 때 처리 하는 부분 
+        document.querySelector("#findByCd").addEventListener("click", e => {
+            fetch("findByCd?grp_cd=lang&cd=java")
+            .then(response => {
+                if (response.status == 200) {
+                    return response.json();
+                }
+                return "{result:'없음'}";
+            })
+            .then(json => {
+                result.innerText = JSON.stringify(json);
+            })
+        });
+        //코드 삭제를 클릭했을 때 처리 하는 부분 
+        document.querySelector("#deleteCode").addEventListener("click", e => {
+            fetch("deleteCode?grp_cd=lang&cd=java")
+            .then(response => response.json())
+            .then(json => {
+                result.innerText = JSON.stringify(json);
+            })
+        });
+
+    </script>
+</body>
+</html>

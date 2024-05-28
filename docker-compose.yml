@@ -1,0 +1,24 @@
+version: '3.1'
+services:
+  mariadb:
+    container_name: devops-mariadb
+    image: mariadb:10
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - /Users/masungil/db_data/devops:/var/lib/mysql:rw
+    user: mysql
+    environment:
+      MARIADB_DATABASE: koreatech_db
+      MARIADB_USER: koreatech
+      MARIADB_PASSWORD: 1004koreatech
+      MARIADB_ROOT_PASSWORD: 1004koreatech
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_general_ci
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+    container_name: redis

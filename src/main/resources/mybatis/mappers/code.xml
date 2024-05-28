@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+           "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.ac.koreantech.devopt.mapper.CodeMapper">
+
+	<!--코드를 조회합니다-->
+	<select id="codeList" resultType="CodeVO">
+	    SELECT 
+	    	  grp_cd
+		    , cd
+		    , grp_cd_nm
+		    , cd_nm
+		    , make_date
+		    , use_yn
+	    FROM code 
+	    where use_yn = 'Y'
+		    <if test="grp_cd != null and grp_cd != ''">
+		        and grp_cd = #{grp_cd}
+		    </if>
+	    	    
+	</select>
+
+	<select id="findByCd" resultType="CodeVO">
+		SELECT  
+	    	  grp_cd
+		    , cd
+		    , grp_cd_nm
+		    , cd_nm
+		    , make_date
+		    ,use_yn
+		FROM  code 
+		where use_yn = 'Y' and grp_cd = #{grp_cd} and cd = #{cd}
+	</select>
+
+	<insert id="insertCode">
+		insert into code (
+	    	  grp_cd
+		    , cd
+		    , grp_cd_nm
+		    , cd_nm
+		) values (
+	    	  #{grp_cd}
+		    , #{cd}
+		    , #{grp_cd_nm}
+		    , #{cd_nm}
+		) 
+	</insert>
+
+	<update id="updateCode">
+		update code set 
+			 grp_cd_nm = #{grp_cd_nm}
+		     cd_nm   = #{cd_nm}
+		where grp_cd = #{grp_cd}
+		    and cd   = #{cd}
+	</update>
+
+	<delete id="deleteCode">
+		update code set 
+			use_yn = 'N'  
+		where grp_cd = #{grp_cd}
+		    and cd   = #{cd}
+	</delete>
+	
+</mapper>
