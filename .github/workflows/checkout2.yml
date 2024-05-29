@@ -40,7 +40,7 @@ jobs:
       uses: docker/login-action@v2
       with:
         username: ${{ github.repository_owner }}
-        password: ${{ secrets.ACCESS_PASSWORD }}
+        password: ${{ secrets.ACCESS_TOKEN }}
 
     # 5. Docker Hub 이미지 푸시
     - name: docker Hub push
