@@ -34,10 +34,10 @@ jobs:
     # 3. Docker 이미지 빌드
     - name: docker image build
       run: docker build -t ${{ github.repository_owner }}/devops .
-      
+
     # 4. DockerHub 로그인
     - name: docker login
-      uses: docker/login-action@v2
+      uses: docker/login-action@v1
       with:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.ACCESS_TOKEN }}
