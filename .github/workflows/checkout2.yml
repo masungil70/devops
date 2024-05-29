@@ -43,11 +43,15 @@ jobs:
 
       - name: Build and push
         id: docker_build
-        uses: docker/build-push-action@v2
-        with:
-          builder: ${{ steps.buildx.outputs.name }}
-          push: true
-          tags: ${{ env.DOCKER_IMAGE }}:latest
+        uses: docker/build-push-action@v2        #사용할 동작
+        with:                                    #동작에 대한 input값 사용 선언
+          context: .                             #context
+          file: ./Dockerfile                     #빌드 시 사용할 Dockerfile의 위치 지정
+          platforms: linux/amd64                 #이미지 등록 시 Platform 이름 지정
+          push: true                             #빌드 후 배포 여부 체크 
+          tags: ${{ steps.docker_meta.outputs.tags }}       #빌드 시 위에서 지정한 태그를 사용하도록 지정
+          labels: ${{ steps.docker_meta.outputs.labels }}   #빌드 시 위에서 지정한 태그를 사용하도록 지정
+
   # 배포 Job
   deploy:
     needs: build  # build 후에 실행되도록 정의
