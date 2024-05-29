@@ -30,7 +30,7 @@ services:
       - my_bridge_network
 
   was1:
-    image: devops/devops:0.1
+    image: masungil/devops:0.1
     ports:
       - 8090:8090
     container_name: devops-was1
