@@ -11,57 +11,37 @@ env:
   VERSION: ${{ github.sha }}
   NAME: devops
 
+
 jobs:
-  # 빌드 Job
-  build:
-    name: Build
+  # Spring Boot 애플리케이션을 빌드하여 도커허브에 푸시하는 과정
+  build-docker-image:
     runs-on: ubuntu-latest
     steps:
-      # github repository에서 checkout
-      - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+    # 1. Java 17 세팅
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
 
-      # docker build 수행
-      - name: Set up docker buildx
-        id: buildx
-        uses: docker/setup-buildx-action@v1
+    # 2. Spring Boot 애플리케이션 빌드
+    - name: Build with Gradle
+      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+      with:
+        arguments: clean bootJar
 
-      - name: Cache docker layers
-        uses: actions/cache@v2
-        with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ env.VERSION }}
-          restore-keys: |
-            ${{ runner.os }}-buildx-
+    # 3. Docker 이미지 빌드
+    - name: docker image build
+      run: docker build -t ${{ github.repository_owner }}/devops .
 
-      # GitHub 컨테이너 레지스트리에 로그인 후 빌드 & 푸시
-      - name: Login to ghcr
-        uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.ACCESS_TOKEN }}
+    # 4. DockerHub 로그인
+    - name: docker login
+      uses: docker/login-action@v2
+      with:
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.ACCESS_PASSWORD }}
 
-      - name: Build and push
-        uses: docker/build-push-action@v2 # build-push-action 사용
-        with:
-          context: .
-          push: true
-          tags: ${{ github.repository_owner }}/${{ env.DOCKER_IMAGE }}:latest
-
-  # 배포 Job
-  deploy:
-    needs: build  # build 후에 실행되도록 정의
-    name: Deploy
-    runs-on: [ self-hosted, label-go ] # AWS ./configure에서 사용할 label명
-    steps:
-      - name: Login to ghcr
-        uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.ACCESS_TOKEN }}
-      # 8090  -> 8090 포트로 수행하도록 지정
-      - name: Docker run
-        run: |
-          docker stop ${{ env.NAME }} && docker rm ${{ env.NAME }} && docker rmi ${{ env.DOCKER_IMAGE }}:latest
-          docker run -d -p 8090:8090 --name devops --restart always ${{ env.DOCKER_IMAGE }}:latest
+    # 5. Docker Hub 이미지 푸시
+    - name: docker Hub push
+      run: docker push ${{ github.repository_owner }}/devops
