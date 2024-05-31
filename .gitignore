@@ -36,6 +36,6 @@ out/
 ### VS Code ###
 .vscode/
 
-참고자료.txt
-Dockerfile
-src/test/java/kr/ac/koreantech/devopt/mapper/CodeMapperTest.java
+#참고자료.txt
+#Dockerfile
+#src/test/java/kr/ac/koreantech/devopt/mapper/CodeMapperTest.java
