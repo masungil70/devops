@@ -2,7 +2,7 @@
 
 ### Reference Documentation
 
-* [DevOps 개발 프로세스](https://velog.io/@jm1225/DevOps-%EA%B0%9C%EB%B0%9C-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4, "DevOps 개발 프로세스")
+* [DevOps 개발 프로세스](https://velog.io/@jm1225/DevOps-%EA%B0%9C%EB%B0%9C-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)
 * [CI/CD에 대하여](https://velog.io/@jm1225/CICD%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC)
 * [지속적 통합](https://velog.io/@jm1225/Continuous-Intergration)
 * [VSCode에 Spring Boot 개발 환경 세팅 및 샘플 프로젝트 생성, 실행](https://kim-oriental.tistory.com/21)
