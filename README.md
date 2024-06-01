@@ -2,8 +2,6 @@
 
 ### Reference Documentation
 
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
-
 * [DevOps 개발 프로세스](https://velog.io/@jm1225/DevOps-%EA%B0%9C%EB%B0%9C-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4, "DevOps 개발 프로세스")
 * [CI/CD에 대하여](https://velog.io/@jm1225/CICD%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC)
 * [지속적 통합](https://velog.io/@jm1225/Continuous-Intergration)
