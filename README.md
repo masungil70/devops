@@ -34,7 +34,7 @@
 * [AWS EC2 Ubuntu22.04 환경에 Docker, Docker-compose 설치](https://jongsky.tistory.com/49)
 
 ## 추천 
-* [비전공자도 이해할 수 있는 CI/CD 입문·실전](https://jscode.notion.site/a296752baf914e8ab95a1782a64800c2)
+* [비전공자도 이해할 수 있는 CI/CD 입문·실전 ㅣ 출처(인프런 : JSCODE 박재성)](https://jscode.notion.site/a296752baf914e8ab95a1782a64800c2)
 
 
 
