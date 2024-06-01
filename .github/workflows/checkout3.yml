@@ -45,9 +45,9 @@ jobs:
     - name: docker Hub push
       run: \
         docker push ${{ secrets.USERNAME }}/devops:${{ env.VERSION }}
-        sudo docker stop app1 && sudo docker rm app1 
+        sudo docker stop app1 && sudo docker rm app1 || true
         sudo docker run -d --network ubuntu_my_bridge_network --name app1 --restart always ${{ secrets.DOCKER_USERNAME }}/devops:${{ env.VERSION }}
-        sudo docker stop app2 && sudo docker rm app2 
+        sudo docker stop app2 && sudo docker rm app2 || true
         sudo docker run -d --network ubuntu_my_bridge_network --name app2 --restart always ${{ secrets.DOCKER_USERNAME }}/devops:${{ env.VERSION }}
         sudo docker image prune -af
         # 사용되지 않는 도커이미지를 삭제한다
