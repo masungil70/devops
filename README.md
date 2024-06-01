@@ -31,8 +31,10 @@
 * [Docker Bridge 네트워크 이해 및 컨테이너 공용 네트워크 생성](https://itbhome.tistory.com/47)
 * [도커 commit(커밋) & push(푸시) - 컨테이너를 새로운 도커 이미지로 저장하고 레퍼지토리에 업로드](https://mvje.tistory.com/168)
 * [Github Container Registry 사용하기](https://gblee1987.tistory.com/184)
-* [비전공자도 이해할 수 있는 CI/CD 입문·실전](https://jscode.notion.site/a296752baf914e8ab95a1782a64800c2)
 * [AWS EC2 Ubuntu22.04 환경에 Docker, Docker-compose 설치](https://jongsky.tistory.com/49)
+
+## 추천 
+* [비전공자도 이해할 수 있는 CI/CD 입문·실전](https://jscode.notion.site/a296752baf914e8ab95a1782a64800c2)
 
 
 
