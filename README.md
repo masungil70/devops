@@ -8,7 +8,7 @@
 * [VSCode에 Spring Boot 개발 환경 세팅 및 샘플 프로젝트 생성, 실행](https://kim-oriental.tistory.com/21)
 * [VSCode에서 Git 연동하기](https://velog.io/@ahnsanghyeon/VSCode%EC%97%90%EC%84%9C-Git-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0)
 * [Ubuntu에 Java 설치하기](https://velog.io/@ung6860/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BDUbuntu%EC%97%90-Java-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0)
-* [ssh-keygen 사용법](https://handari.tistory.com/8)
+* [ssh-keygen 사용법](https://velog.io/@hyeonseop/SSH-Key%EB%A1%9C-%EC%84%9C%EB%B2%84-%EC%A0%91%EC%86%8D%ED%95%98%EA%B8%B0)
 * [scp 명령어 사용법](https://dev.classmethod.jp/articles/use-scp-upload-scp/)
 * [GIT 개념 원리](https://inpa.tistory.com/entry/GIT-%E2%9A%A1%EF%B8%8F-%EA%B0%9C%EB%85%90-%EC%9B%90%EB%A6%AC-%EC%89%BD%EA%B2%8C%EC%9D%B4%ED%95%B4)
 * [GIT Branch 정리](https://inpa.tistory.com/entry/GIT-%E2%9A%A1%EF%B8%8F-%EA%B9%83-Branch-%EC%A0%95%EB%A6%AC-branch-checkout-merge-rebase)
