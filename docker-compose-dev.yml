@@ -9,7 +9,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./db_data:/var/lib/mysql:rw
+      - shared-data:/var/lib/mysql:rw
     user: mysql
     environment:
       MARIADB_DATABASE: koreatech_db
@@ -58,3 +58,11 @@ services:
 networks:
   my_bridge_network:
     driver: bridge
+
+volumes:
+  shared-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./db_data
