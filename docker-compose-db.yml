@@ -1,0 +1,21 @@
+#version: '3.1'
+#네트웍 브릿지 추가 함 
+
+services:
+  mariadb:
+    container_name: devops-mariadb
+    image: mariadb:10
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - ./db_data:/var/lib/mysql:rw
+    user: mysql
+    environment:
+      MARIADB_DATABASE: koreatech_db
+      MARIADB_USER: koreatech
+      MARIADB_PASSWORD: 1004koreatech
+      MARIADB_ROOT_PASSWORD: 1004koreatech
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_general_ci
