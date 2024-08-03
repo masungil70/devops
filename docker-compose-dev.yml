@@ -30,6 +30,28 @@ services:
     networks:
       - my_bridge_network
 
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:80
+    volumes:
+      - /Users/masungil/nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - app1
+      - app2
+    networks:
+      - my_bridge_network
+
+  app1:
+    image: masungil/devops:latest
+    networks:
+      - my_bridge_network
+
+  app2:
+    image: masungil/devops:latest
+    networks:
+      - my_bridge_network
+
 
 networks:
   my_bridge_network:
