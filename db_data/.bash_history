@@ -1,0 +1,2 @@
+ip addr
+exit

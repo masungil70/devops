@@ -9,7 +9,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - /Users/masungil/db_data/devops:/var/lib/mysql:rw
+      - ./db_data:/var/lib/mysql:rw
     user: mysql
     environment:
       MARIADB_DATABASE: koreatech_db
@@ -35,8 +35,10 @@ services:
     ports:
       - 80:80
     volumes:
-      - /Users/masungil/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf
     depends_on:
+      - redis
+      - mariadb
       - app1
       - app2
     networks:

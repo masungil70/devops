@@ -8,7 +8,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - /Users/masungil/db_data/devops:/var/lib/mysql:rw
+      - ./db_data:/var/lib/mysql:rw
     user: mysql
     environment:
       MARIADB_DATABASE: koreatech_db
@@ -29,14 +29,27 @@ services:
     networks:
       - my_bridge_network
 
-  was1:
-    image: masungil/devops:0.1
+  nginx:
+    image: nginx:latest
     ports:
-      - 8090:8090
-    container_name: devops-was1
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - redis
       - mariadb
+      - app1
+      - app2
+    networks:
+      - my_bridge_network
+
+  app1:
+    image: masungil/devops:latest
+    networks:
+      - my_bridge_network
+
+  app2:
+    image: masungil/devops:latest
     networks:
       - my_bridge_network
 
