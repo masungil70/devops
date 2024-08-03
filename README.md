@@ -23,7 +23,7 @@
 * [젠킨스-windows 설치-설정](https://inpa.tistory.com/entry/Jenkins-%F0%9F%A4%B5-%EC%A0%A0%ED%82%A8%EC%8A%A4-%EC%84%A4%EC%B9%98-%EC%84%A4%EC%A0%95)
 * [젠킨스-ubuntu 설치-설치](https://devje.tistory.com/233)
 * [GIT-GITHUB-Jenkins 연동 하는 방법](https://inpa.tistory.com/entry/Jenkins-%F0%9F%A4%B5-GithubGit-%EC%97%B0%EB%8F%99-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
-* [GIT-GITHUB-Jenkins webhook 연동 하는 방법](https://1minute-before6pm.tistory.com/52)
+* [GIT-GITHUB-Jenkins webhook 연동 하는 방법](https://junhyunny.github.io/information/jenkins/github/jenkins-github-webhook/)
 * [TDD 방법론 테스트 주도 개발](https://inpa.tistory.com/entry/QA-%F0%9F%93%9A-TDD-%EB%B0%A9%EB%B2%95%EB%A1%A0-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A3%BC%EB%8F%84-%EA%B0%9C%EB%B0%9C)
 * [Docker Overview](https://velog.io/@jm1225/Docker-Guides-Overview)
 * [Get Docker](https://velog.io/@jm1225/Docker-Guides-Get-Docker)
