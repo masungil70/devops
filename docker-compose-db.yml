@@ -9,7 +9,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./db_data:/var/lib/mysql:rw
+      - shared-data:/var/lib/mysql:rw
     user: mysql
     environment:
       MARIADB_DATABASE: koreatech_db
@@ -19,3 +19,6 @@ services:
     command:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_general_ci
+
+volumes:
+  shared-data:
