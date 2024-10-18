@@ -58,8 +58,8 @@ jobs:
     # my_bridge_network 사용하도록 지정
     - name: Docker run
       run: |
-        sudo docker stop devops-app1_1 && sudo docker rm devops-app1_1
-        sudo docker run -d --network devops_my_bridge_network --name devops-app1_1 --restart always ${{ secrets.USERNAME }}/devops:${{ env.VERSION }}
-        sudo docker stop devops-app2_1 && sudo docker rm devops-app2_1
-        sudo docker run -d --network devops_my_bridge_network --name devops-app2_1 --restart always ${{ secrets.USERNAME }}/devops:${{ env.VERSION }}
+        sudo docker stop devops_app1_1 && sudo docker rm devops_app1_1
+        sudo docker run -d --network devops_my_bridge_network --name devops_app1_1 --restart always ${{ secrets.USERNAME }}/devops:${{ env.VERSION }}
+        sudo docker stop devops_app2_1 && sudo docker rm devops_app2_1
+        sudo docker run -d --network devops_my_bridge_network --name devops_app2_1 --restart always ${{ secrets.USERNAME }}/devops:${{ env.VERSION }}
         sudo docker image prune -af
