@@ -36,6 +36,8 @@
 * [TDD 방법론 테스트 주도 개발](https://inpa.tistory.com/entry/QA-%F0%9F%93%9A-TDD-%EB%B0%A9%EB%B2%95%EB%A1%A0-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A3%BC%EB%8F%84-%EA%B0%9C%EB%B0%9C)
 * [Github Container Registry 사용하기](https://gblee1987.tistory.com/184)
 * [AWS EC2 Ubuntu22.04 환경에 Docker, Docker-compose 설치](https://jongsky.tistory.com/49)
+* [GitHub Actions에서 나만의 액션(action) 만들기](https://www.daleseo.com/github-actions-composite/)
+* [Github actions와 slack 연동해서 알림받기](https://velog.io/@sdb016/Github-actions%EC%99%80-slack-%EC%97%B0%EB%8F%99%ED%95%B4%EC%84%9C-%EC%95%8C%EB%A6%BC%EB%B0%9B%EA%B8%B0)
 
 ## 추천 
 * [비전공자도 이해할 수 있는 CI/CD 입문·실전 ㅣ 출처(인프런 : JSCODE 박재성)](https://jscode.notion.site/a296752baf914e8ab95a1782a64800c2)
