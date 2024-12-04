@@ -34,6 +34,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	implementation 'org.apache.commons:commons-lang3:3.0'
 	
+	//환경설정 변수 읽을 수 있는 라이브러리 설정
+	implementation 'io.github.cdimascio:java-dotenv:5.2.2'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:2.3.0'}
 

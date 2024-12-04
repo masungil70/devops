@@ -24,10 +24,14 @@ public class RedisConfig {
     @Value("${spring.data.redis.port}")
     private int port;
 
+    @Value("${ENV_NAME:aaa}")
+    private String envName;
+
     @Bean
     public RedisConnectionFactory redisConnectionFactory() {
-    	log.info("host = " + host);
-    	log.info("port = " + port);
+        log.info("host = " + host);
+        log.info("port = " + port);
+        log.info("envName = " + envName);
         return new LettuceConnectionFactory(host, port);
     }
 
