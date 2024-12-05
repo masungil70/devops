@@ -20,6 +20,7 @@
 * [GitHub 원격 저장소 관리](https://inpa.tistory.com/entry/GIT-%E2%9A%A1%EF%B8%8F-%EA%B9%83%ED%97%99-%EC%9B%90%EA%B2%A9-%EC%A0%80%EC%9E%A5%EC%86%8C-%EA%B4%80%EB%A6%AC-git-remote)
 * [GitHub Actions의 체크아웃( 액션으로 코드 내려받기](https://www.daleseo.com/github-actions-checkout/)
 * [Docker Overview](https://velog.io/@jm1225/Docker-Guides-Overview)
+* [AWS EC2 Ubuntu22.04 환경에 Docker, Docker-compose 설치](https://jongsky.tistory.com/49)
 * [Get Docker](https://velog.io/@jm1225/Docker-Guides-Get-Docker)
 * [Get started](https://velog.io/@jm1225/Docker-Guides-Get-started)
 * [Docker CLI](https://velog.io/@jm1225/Docker-Guides-CLI)
@@ -35,7 +36,6 @@
 * [GIT-GITHUB-Jenkins webhook 연동 하는 방법](https://junhyunny.github.io/information/jenkins/github/jenkins-github-webhook/)
 * [TDD 방법론 테스트 주도 개발](https://inpa.tistory.com/entry/QA-%F0%9F%93%9A-TDD-%EB%B0%A9%EB%B2%95%EB%A1%A0-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A3%BC%EB%8F%84-%EA%B0%9C%EB%B0%9C)
 * [Github Container Registry 사용하기](https://gblee1987.tistory.com/184)
-* [AWS EC2 Ubuntu22.04 환경에 Docker, Docker-compose 설치](https://jongsky.tistory.com/49)
 * [GitHub Actions에서 나만의 액션(action) 만들기](https://www.daleseo.com/github-actions-composite/)
 * [Github actions와 slack 연동해서 알림받기](https://velog.io/@sdb016/Github-actions%EC%99%80-slack-%EC%97%B0%EB%8F%99%ED%95%B4%EC%84%9C-%EC%95%8C%EB%A6%BC%EB%B0%9B%EA%B8%B0)
 
