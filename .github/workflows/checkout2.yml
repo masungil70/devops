@@ -7,7 +7,7 @@ on:
 
 # 환경설정
 env:
-  VERSION: ${{ github.sha }}
+  VERSION: ${{ github.run_number }}
   NAME: devops
 
 
@@ -32,7 +32,7 @@ jobs:
 
     # 3. Docker 이미지 빌드
     - name: docker image build
-      run: docker build -t ${{ secrets.USERNAME }}/devops .
+      run: docker build -t ${{ secrets.USERNAME }}/devops:${{ env.VERSION }} .
 
     # 4. DockerHub 로그인
     - name: docker login
@@ -43,4 +43,4 @@ jobs:
     
     # 5. Docker Hub 이미지 푸시
     - name: docker Hub push
-      run: docker push ${{ secrets.USERNAME }}/devops
+      run: docker push ${{ secrets.USERNAME }}/devops:${{ env.VERSION }}
