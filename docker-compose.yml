@@ -7,7 +7,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - /Users/masungil/db_data/devops:/var/lib/mysql:rw
+      - ./db_data:/var/lib/mysql:rw
     user: mysql
     environment:
       MARIADB_DATABASE: koreatech_db

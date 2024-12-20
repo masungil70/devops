@@ -66,3 +66,4 @@ volumes:
       type: none
       o: bind
       device: ./db_data
+
