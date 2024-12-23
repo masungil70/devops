@@ -46,11 +46,13 @@ services:
 
   app1:
     image: masungil/devops:latest
+    container_name: devops-app1
     networks:
       - my_bridge_network
 
   app2:
     image: masungil/devops:latest
+    container_name: devops-app2
     networks:
       - my_bridge_network
 
