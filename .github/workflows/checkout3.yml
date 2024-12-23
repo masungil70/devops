@@ -65,3 +65,8 @@ jobs:
         docker stop devops_app2 && sudo docker rm devops_app2
         docker run -d --network devops_my_bridge_network --name devops_app2 --restart always ${{ secrets.USERNAME }}/devops:${{ env.VERSION }}
         docker image prune -af
+        docker stop devops_app1 && docker rm devops_app1
+        docker run -d --network devops_my_bridge_network --name devops_app1 --restart always ${{ secrets.USERNAME }}/devops:latest
+        docker stop devops_app2 && sudo docker rm devops_app2
+        docker run -d --network devops_my_bridge_network --name devops_app2 --restart always ${{ secrets.USERNAME }}/devops:latest
+        docker image prune -af        
