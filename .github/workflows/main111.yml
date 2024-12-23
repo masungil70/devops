@@ -10,7 +10,6 @@ env:
   VERSION: ${{ github.run_number }}
   NAME: devops
 
-
 jobs:
   # Spring Boot 애플리케이션을 빌드하여 도커허브에 푸시하는 과정
   build-docker-image:
