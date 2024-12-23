@@ -1,4 +1,4 @@
-name: CI/CD Docker4
+name: CI/CD Docker3
 
 # 트리거를 수행할 브랜치를 지정합니다.
 on:
